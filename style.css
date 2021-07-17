@@ -1,0 +1,254 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.title {
+    color: rgb(13, 77, 52);
+}
+
+#italic {
+    color: orange;
+
+}
+
+nav {
+    background:aquamarine;
+    text-align: center;
+}
+
+.nav-wrapper{
+    background-color: blue;
+}
+
+
+a {
+    text-decoration-line: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+
+.container {
+    border: 5px dashed grey;
+    margin : 50px 5px 25px 0px;
+    padding: 30px;
+
+}
+
+./* box { 
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 10px;
+} */
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#box2 {
+    animation-name:  rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,purple, orange, yellow, pink, purple);
+}
+
+@keyframes rotation {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger 6s infinite ease-in;
+    border-radius: 50%;
+    background: orange;
+}
+
+@keyframes changeColors {
+    0% {background: grey ;}
+    25% {background: purple ;}
+    50% {background: yellow ;}
+    75% {background: pink ;}
+    100% {background: grey ;}
+}
+
+/* The forwars below is only if you going to limit the number of repeats, in infinit
+   it doesn't matter */
+
+#box4 {
+    animation: changeColors 3s infinite forwards;
+}
+
+@keyframes moveBox {
+    0% {left: 0 px; top: 0px}
+    25% {left: 100px; top: 0px}
+    50% {left: 100px; top: 200px}
+    75% {left: 0px; top: 200px}
+    1000% {left: 0px; top: 0px}
+}
+
+#box5 {
+    position: relative;
+    background: red;
+    animation: moveBox 5s infinite;
+}
+
+#box6 {
+    top: 10px;
+    left: 200px;
+    position: relative;
+}
+
+/* html {
+    background-image: radial-gradient(blue,green, purple);
+    
+}
+*/
+
+.circle-img {
+   border-radius: 50%; 
+}
+
+img {
+    box-shadow: 8px 8px 10px rgb(154, 159, 160) ;
+
+
+}
+
+/* form input {
+  display: block;  
+  margin: 30px;
+}
+
+form textarea {
+    display: block;
+    margin:30px;
+}
+
+form button {
+display:block;
+margin:30px
+
+} */
+
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin: 30px;
+}
+
+.input-field {
+    margin: 20px;}
+
+
+form input, textarea, button {
+    display: block;
+    margin: 30px
+}
+
+
+
+
+/* This is a comment */
+
+.flex{
+    margin: 30px;
+    border: 3PX SOLID BLACK;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: white;
+    color: #444;
+  }
+
+  .Box {
+    background-color: white;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+  }
+
+  .a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+  }
+  .b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+  }
+  .c {
+    grid-column: col 1 / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    background-image: linear-gradient(pink, yellow, purple, orange);
+  }
+  .d {
+    grid-column: col 1 / span  3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+  }
+
+  .e {
+    grid-column: col 3 / span  3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(orange, purple,yellow,pink);
+  }
